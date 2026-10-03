@@ -1,11 +1,21 @@
-# DimitTech — Playwright тестове
+# DimitTech - Playwright tests
 
-Автоматизирани E2E тестове (TypeScript) за https://dimitarbeograd-qa.github.io/
+Automated end-to-end tests (TypeScript) for https://dimitarbeograd-qa.github.io/
 
-## Стартиране
+## Getting started
+
     npm install
     npx playwright install chromium
     npx playwright test
     npx playwright show-report
 
-Покрива: заглавие, секции, контакти, вътрешни котви, втора страница, JS грешки — на desktop и mobile (Pixel 7).
+## What is covered
+
+Page title, main sections, contact details, internal anchors, a secondary page and JavaScript console errors. Every test runs on desktop (Desktop Chrome) and mobile (Pixel 7).
+
+## Project structure
+
+- `pages/` - Page Object Model classes
+- `tests/` - test specs
+- `playwright.config.ts` - Playwright configuration
+- `.github/workflows/playwright.yml` - CI: runs on every push, pull request and weekly on Mondays
